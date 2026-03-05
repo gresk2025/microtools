@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Generador de Lorem Ipsum Gratis Online</title>
+  <meta name="description" content="Genera texto Lorem Ipsum de relleno al instante. Elige número de párrafos, palabras o caracteres."/>
+  <meta name="keywords" content="lorem ipsum generador, texto de relleno gratis, placeholder text, dummy text online"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="MicroTools"/>
+  <meta name="monetag" content="2ff2d7cbae129107d4a6eded997723e4"/>
+  <link rel="canonical" href="http://hazlo.42web.io/14-lorem-ipsum/"/>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Generador de Lorem Ipsum Gratis Online"/>
+  <meta property="og:description" content="Genera texto Lorem Ipsum de relleno al instante. Elige número de párrafos, palabras o caracteres."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="http://hazlo.42web.io/14-lorem-ipsum/"/>
+  <meta property="og:locale" content="es_ES"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Generador de Lorem Ipsum Gratis Online"/>
+  <meta name="twitter:description" content="Genera texto Lorem Ipsum de relleno al instante. Elige número de párrafos, palabras o caracteres."/>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Generador de Lorem Ipsum Gratis Online","description":"Genera texto Lorem Ipsum de relleno al instante. Elige número de párrafos, palabras o caracteres.","url":"https://TUDOMINIO.com/14-lorem-ipsum/","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#0f0f13;--surface:#1a1a24;--surface2:#22222f;--accent:#7c3aed;
+      --accent2:#a855f7;--text:#e2e8f0;--muted:#94a3b8;--border:#2d2d3d;
+      --radius:12px;--success:#10b981;--warning:#f59e0b;--error:#ef4444;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+    header{background:var(--surface);border-bottom:1px solid var(--border);padding:1rem 1.5rem;display:flex;align-items:center;gap:1rem}
+    header h1{font-size:1.2rem;font-weight:700;background:linear-gradient(135deg,var(--accent2),#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    header .logo{width:36px;height:36px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+    nav{background:var(--surface);border-bottom:1px solid var(--border);padding:.5rem 1.5rem;font-size:.8rem;color:var(--muted)}
+    nav a{color:var(--accent2);text-decoration:none}
+    .ad-container{background:var(--surface2);border:1px dashed var(--border);border-radius:var(--radius);margin:1rem auto;max-width:760px;min-height:90px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.75rem;width:100%}
+    .ad-top{margin-top:1rem}
+    main{flex:1;max-width:760px;width:100%;margin:0 auto;padding:1.5rem 1rem}
+    .hero{text-align:center;margin-bottom:2rem}
+    .hero h1{font-size:2rem;font-weight:700;line-height:1.3;margin-bottom:.75rem}
+    .hero p{color:var(--muted);font-size:1rem;max-width:550px;margin:0 auto}
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-bottom:1.5rem}
+    .card h2{font-size:1rem;font-weight:600;margin-bottom:1rem;color:var(--accent2)}
+    label{display:block;margin-bottom:.3rem;font-size:.85rem;color:var(--muted)}
+    input,textarea,select{width:100%;padding:.65rem .9rem;background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:inherit;font-size:.9rem;outline:none;transition:border .2s}
+    input:focus,textarea:focus,select:focus{border-color:var(--accent)}
+    textarea{resize:vertical;min-height:120px}
+    .btn{display:inline-flex;align-items:center;gap:.4rem;padding:.65rem 1.4rem;border-radius:8px;font-weight:600;font-size:.9rem;cursor:pointer;border:none;transition:all .2s;font-family:inherit}
+    .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff}
+    .btn-primary:hover{opacity:.85;transform:translateY(-1px)}
+    .btn-secondary{background:var(--surface2);color:var(--text);border:1px solid var(--border)}
+    .btn-secondary:hover{border-color:var(--accent)}
+    .btn-group{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}
+    .result-box{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:1rem;margin-top:1rem;word-break:break-all;font-size:.9rem;min-height:60px}
+    .result-box.hidden{display:none}
+    .badge{display:inline-block;padding:.2rem .6rem;border-radius:999px;font-size:.75rem;font-weight:600}
+    .badge-success{background:#10b98120;color:var(--success)}
+    .badge-error{background:#ef444420;color:var(--error)}
+    .badge-warning{background:#f59e0b20;color:var(--warning)}
+    .faq{margin-top:2rem}
+    .faq h2{font-size:1.2rem;margin-bottom:1rem}
+    .faq-item{border-bottom:1px solid var(--border);padding:.75rem 0}
+    .faq-item h3{font-size:.9rem;font-weight:600;margin-bottom:.3rem;color:var(--accent2)}
+    .faq-item p{font-size:.85rem;color:var(--muted);line-height:1.6}
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:1.5rem;text-align:center;font-size:.8rem;color:var(--muted)}
+    footer a{color:var(--accent2);text-decoration:none}
+    @media(max-width:600px){.hero h1{font-size:1.5rem}.btn-group{flex-direction:column}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">*</div>
+  <h1>MicroTools</h1>
+</header>
+<nav><a href="/">Inicio</a> &rsaquo; Generador de Lorem Ipsum</nav>
+
+<!-- Monetag Ad Slot -->
+<div class="ad-container ad-top">
+  <!-- REEMPLAZA con tu código de Monetag -->
+  <!-- <script async src="//your-monetag-script.js"></script> -->
+</div>
+
+<main>
+  <div class="hero">
+    <h1>Generador de Lorem Ipsum</h1>
+    <p>Genera texto Lorem Ipsum de relleno al instante. Elige número de párrafos, palabras o caracteres.</p>
+  </div>
+
+  <div class="card">
+<h2>Genera texto Lorem Ipsum</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1rem">
+  <div><label>Parrafos</label><input type="number" id="lor-par" value="3" min="1" max="20"/></div>
+  <div><label>Tipo</label>
+  <select id="lor-type"><option value="classic">Lorem Ipsum clasico</option><option value="spanish">Espanol generico</option></select></div>
+</div>
+<div class="btn-group">
+  <button class="btn btn-primary" onclick="genLorem()">Generar</button>
+  <button class="btn btn-secondary" onclick="navigator.clipboard.writeText(document.getElementById('lorem-out').value)">Copiar</button>
+</div>
+<textarea id="lorem-out" style="min-height:200px;margin-top:1rem" readonly></textarea>
+</div>
+<script>
+var LW="lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco laboris nisi aliquip ex ea commodo consequat duis aute irure reprehenderit voluptate velit esse cillum eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt culpa officia deserunt mollit anim id est laborum".split(" ");
+var EW="el la de que y en un ser se no haber por con su para como estar tener le lo todo pero mas hacer poder decir este ir otro ese si ya ver porque dar cuando muy sin vez mucho hay donde despues quien dentro todo tiempo mismo dia hombre asi cada grande mismo nuevo".split(" ");
+function genLorem(){
+  var n=parseInt(document.getElementById('lor-par').value)||3;
+  var words=document.getElementById('lor-type').value==='classic'?LW:EW;
+  var out=[];
+  for(var i=0;i<n;i++){
+    var len=50+Math.floor(Math.random()*60);
+    var p=Array.from({length:len},function(){return words[Math.floor(Math.random()*words.length)];}).join(' ');
+    p=p.charAt(0).toUpperCase()+p.slice(1)+'.';
+    out.push(p);
+  }
+  document.getElementById('lorem-out').value=out.join('
+
+');
+}
+window.onload=genLorem;
+</script>
+
+  <!-- FAQ para SEO longitud -->
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="faq-item" itemscope itemtype="https://schema.org/Question"><h3 itemprop="name">¿Para qué sirve el Lorem Ipsum?</h3><p itemprop="text">Es un texto estándar de maquetación usado para visualizar el diseño sin distracciones de contenido real.</p></div>
+<div class="faq-item" itemscope itemtype="https://schema.org/Question"><h3 itemprop="name">¿El texto generado tiene sentido?</h3><p itemprop="text">No, es un extracto deformado de un texto de Cicerón usado como placeholder desde los años 60.</p></div>
+<div class="faq-item" itemscope itemtype="https://schema.org/Question"><h3 itemprop="name">¿Puedo elegir el idioma?</h3><p itemprop="text">El Lorem Ipsum clásico está en latín, pero ofrecemos variantes en español.</p></div>
+
+  </section>
+</main>
+
+<!-- Monetag Ad Slot Bottom -->
+<div class="ad-container ad-bottom">
+  <!-- REEMPLAZA con tu código de Monetag -->
+</div>
+
+<footer>
+  <p>MicroTools &copy; 2025 &mdash; Herramientas gratuitas online &mdash;
+  <a href="/privacidad/">Privacidad</a> &middot; <a href="/contacto/">Contacto</a></p>
+</footer>
+
+
+</body>
+</html>
