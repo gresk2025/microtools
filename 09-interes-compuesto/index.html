@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora de Interés Compuesto Gratis</title>
+  <meta name="description" content="Calcula el crecimiento de tu inversión con interés compuesto. Simula ahorros y rentabilidad fácilmente."/>
+  <meta name="keywords" content="calculadora interés compuesto, simulador inversión, calcular ahorro, rentabilidad inversión"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="MicroTools"/>
+  <meta name="monetag" content="2ff2d7cbae129107d4a6eded997723e4"/>
+  <link rel="canonical" href="http://hazlo.42web.io/09-interes-compuesto/"/>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Calculadora de Interés Compuesto Gratis"/>
+  <meta property="og:description" content="Calcula el crecimiento de tu inversión con interés compuesto. Simula ahorros y rentabilidad fácilmente."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="http://hazlo.42web.io/09-interes-compuesto/"/>
+  <meta property="og:locale" content="es_ES"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Calculadora de Interés Compuesto Gratis"/>
+  <meta name="twitter:description" content="Calcula el crecimiento de tu inversión con interés compuesto. Simula ahorros y rentabilidad fácilmente."/>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Calculadora de Interés Compuesto Gratis","description":"Calcula el crecimiento de tu inversión con interés compuesto. Simula ahorros y rentabilidad fácilmente.","url":"https://TUDOMINIO.com/09-interes-compuesto/","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#0f0f13;--surface:#1a1a24;--surface2:#22222f;--accent:#7c3aed;
+      --accent2:#a855f7;--text:#e2e8f0;--muted:#94a3b8;--border:#2d2d3d;
+      --radius:12px;--success:#10b981;--warning:#f59e0b;--error:#ef4444;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+    header{background:var(--surface);border-bottom:1px solid var(--border);padding:1rem 1.5rem;display:flex;align-items:center;gap:1rem}
+    header h1{font-size:1.2rem;font-weight:700;background:linear-gradient(135deg,var(--accent2),#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    header .logo{width:36px;height:36px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+    nav{background:var(--surface);border-bottom:1px solid var(--border);padding:.5rem 1.5rem;font-size:.8rem;color:var(--muted)}
+    nav a{color:var(--accent2);text-decoration:none}
+    .ad-container{background:var(--surface2);border:1px dashed var(--border);border-radius:var(--radius);margin:1rem auto;max-width:760px;min-height:90px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.75rem;width:100%}
+    .ad-top{margin-top:1rem}
+    main{flex:1;max-width:760px;width:100%;margin:0 auto;padding:1.5rem 1rem}
+    .hero{text-align:center;margin-bottom:2rem}
+    .hero h1{font-size:2rem;font-weight:700;line-height:1.3;margin-bottom:.75rem}
+    .hero p{color:var(--muted);font-size:1rem;max-width:550px;margin:0 auto}
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-bottom:1.5rem}
+    .card h2{font-size:1rem;font-weight:600;margin-bottom:1rem;color:var(--accent2)}
+    label{display:block;margin-bottom:.3rem;font-size:.85rem;color:var(--muted)}
+    input,textarea,select{width:100%;padding:.65rem .9rem;background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:inherit;font-size:.9rem;outline:none;transition:border .2s}
+    input:focus,textarea:focus,select:focus{border-color:var(--accent)}
+    textarea{resize:vertical;min-height:120px}
+    .btn{display:inline-flex;align-items:center;gap:.4rem;padding:.65rem 1.4rem;border-radius:8px;font-weight:600;font-size:.9rem;cursor:pointer;border:none;transition:all .2s;font-family:inherit}
+    .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff}
+    .btn-primary:hover{opacity:.85;transform:translateY(-1px)}
+    .btn-secondary{background:var(--surface2);color:var(--text);border:1px solid var(--border)}
+    .btn-secondary:hover{border-color:var(--accent)}
+    .btn-group{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}
+    .result-box{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:1rem;margin-top:1rem;word-break:break-all;font-size:.9rem;min-height:60px}
+    .result-box.hidden{display:none}
+    .badge{display:inline-block;padding:.2rem .6rem;border-radius:999px;font-size:.75rem;font-weight:600}
+    .badge-success{background:#10b98120;color:var(--success)}
+    .badge-error{background:#ef444420;color:var(--error)}
+    .badge-warning{background:#f59e0b20;color:var(--warning)}
+    .faq{margin-top:2rem}
+    .faq h2{font-size:1.2rem;margin-bottom:1rem}
+    .faq-item{border-bottom:1px solid var(--border);padding:.75rem 0}
+    .faq-item h3{font-size:.9rem;font-weight:600;margin-bottom:.3rem;color:var(--accent2)}
+    .faq-item p{font-size:.85rem;color:var(--muted);line-height:1.6}
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:1.5rem;text-align:center;font-size:.8rem;color:var(--muted)}
+    footer a{color:var(--accent2);text-decoration:none}
+    @media(max-width:600px){.hero h1{font-size:1.5rem}.btn-group{flex-direction:column}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">*</div>
+  <h1>MicroTools</h1>
+</header>
+<nav><a href="/">Inicio</a> &rsaquo; Calculadora de Interés Compuesto</nav>
+
+<!-- Monetag Ad Slot -->
+<div class="ad-container ad-top">
+  <!-- REEMPLAZA con tu código de Monetag -->
+  <!-- <script async src="//your-monetag-script.js"></script> -->
+</div>
+
+<main>
+  <div class="hero">
+    <h1>Calculadora de Interés Compuesto</h1>
+    <p>Calcula el crecimiento de tu inversión con interés compuesto. Simula ahorros y rentabilidad fácilmente.</p>
+  </div>
+
+  <div class="card">
+<h2>Simulador de Interes Compuesto</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem">
+  <div><label>Capital inicial ($)</label><input type="number" id="ci" value="1000" min="0"/></div>
+  <div><label>Aporte mensual ($)</label><input type="number" id="cm" value="100" min="0"/></div>
+  <div><label>Tasa anual (%)</label><input type="number" id="rate" value="8" step="0.1" min="0"/></div>
+  <div><label>Anos</label><input type="number" id="years" value="10" min="1" max="50"/></div>
+  <div><label>Capitalizacion</label>
+  <select id="freq"><option value="12">Mensual</option><option value="4">Trimestral</option><option value="1">Anual</option><option value="365">Diaria</option></select></div>
+</div>
+<div class="btn-group"><button class="btn btn-primary" onclick="calcCompound()">Calcular</button></div>
+<div id="compound-result" style="display:none;margin-top:1rem">
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem;text-align:center">
+    <div class="card" style="padding:.75rem;border-color:var(--success)"><div id="cr-final" style="font-size:1.3rem;font-weight:700;color:var(--success)"></div><div style="font-size:.75rem;color:var(--muted)">Total final</div></div>
+    <div class="card" style="padding:.75rem"><div id="cr-invested" style="font-size:1.3rem;font-weight:700;color:var(--accent2)"></div><div style="font-size:.75rem;color:var(--muted)">Invertido</div></div>
+    <div class="card" style="padding:.75rem;border-color:var(--warning)"><div id="cr-gain" style="font-size:1.3rem;font-weight:700;color:var(--warning)"></div><div style="font-size:.75rem;color:var(--muted)">Ganancias</div></div>
+  </div>
+</div>
+</div>
+<script>
+function calcCompound(){
+  var p=parseFloat(document.getElementById('ci').value)||0;
+  var pmt=parseFloat(document.getElementById('cm').value)||0;
+  var r=parseFloat(document.getElementById('rate').value)/100;
+  var y=parseInt(document.getElementById('years').value)||1;
+  var n=parseInt(document.getElementById('freq').value);
+  var total=p*Math.pow(1+r/n,n*y)+pmt*((Math.pow(1+r/n,n*y)-1)/(r/n))*(n/12);
+  var invested=p+pmt*12*y;
+  function fmt(v){return '$'+v.toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2});}
+  document.getElementById('cr-final').textContent=fmt(total);
+  document.getElementById('cr-invested').textContent=fmt(invested);
+  document.getElementById('cr-gain').textContent=fmt(total-invested);
+  document.getElementById('compound-result').style.display='block';
+}
+</script>
+
+  <!-- FAQ para SEO longitud -->
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="faq-item" itemscope itemtype="https://schema.org/Question"><h3 itemprop="name">¿Qué es el interés compuesto?</h3><p itemprop="text">Es el interés que se calcula sobre el capital inicial más los intereses ya acumulados.</p></div>
+<div class="faq-item" itemscope itemtype="https://schema.org/Question"><h3 itemprop="name">¿Con qué frecuencia se puede capitalizar?</h3><p itemprop="text">Anual, semestral, trimestral, mensual o diaria.</p></div>
+<div class="faq-item" itemscope itemtype="https://schema.org/Question"><h3 itemprop="name">¿Incluye el efecto de la inflación?</h3><p itemprop="text">No, muestra el valor nominal. Para valor real debes ajustar la tasa de retorno.</p></div>
+
+  </section>
+</main>
+
+<!-- Monetag Ad Slot Bottom -->
+<div class="ad-container ad-bottom">
+  <!-- REEMPLAZA con tu código de Monetag -->
+</div>
+
+<footer>
+  <p>MicroTools &copy; 2025 &mdash; Herramientas gratuitas online &mdash;
+  <a href="/privacidad/">Privacidad</a> &middot; <a href="/contacto/">Contacto</a></p>
+</footer>
+
+
+</body>
+</html>
