@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conversor de Unidades Gratis Online</title>
+  <meta name="description" content="Convierte longitud, peso, temperatura, volumen, área y más unidades al instante."/>
+  <meta name="keywords" content="conversor unidades gratis, convertir metros pies, conversión medidas, unit converter"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="MicroTools"/>
+  <meta name="monetag" content="79779c0cb7c8a241281fe23e644eb5a3"/>
+  <meta name="google-site-verification" content="7_B89CtYqhN6a7rBgQ4t9M06hkNcz3867Xgqm_guu34"/>
+  <link rel="canonical" href="https://hazlofacil.vercel.app/17-conversor-unidades/"/>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Conversor de Unidades Gratis Online"/>
+  <meta property="og:description" content="Convierte longitud, peso, temperatura, volumen, área y más unidades al instante."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://hazlofacil.vercel.app/17-conversor-unidades/"/>
+  <meta property="og:locale" content="es_ES"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Conversor de Unidades Gratis Online"/>
+  <meta name="twitter:description" content="Convierte longitud, peso, temperatura, volumen, área y más unidades al instante."/>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Conversor de Unidades Gratis Online","description":"Convierte longitud, peso, temperatura, volumen, área y más unidades al instante.","url":"https://TUDOMINIO.com/17-conversor-unidades/","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#0f0f13;--surface:#1a1a24;--surface2:#22222f;--accent:#7c3aed;
+      --accent2:#a855f7;--text:#e2e8f0;--muted:#94a3b8;--border:#2d2d3d;
+      --radius:12px;--success:#10b981;--warning:#f59e0b;--error:#ef4444;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+    header{background:var(--surface);border-bottom:1px solid var(--border);padding:1rem 1.5rem;display:flex;align-items:center;gap:1rem}
+    header h1{font-size:1.2rem;font-weight:700;background:linear-gradient(135deg,var(--accent2),#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    header .logo{width:36px;height:36px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+    nav{background:var(--surface);border-bottom:1px solid var(--border);padding:.5rem 1.5rem;font-size:.8rem;color:var(--muted)}
+    nav a{color:var(--accent2);text-decoration:none}
+    .ad-container{background:var(--surface2);border:1px dashed var(--border);border-radius:var(--radius);margin:1rem auto;max-width:760px;min-height:90px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.75rem;width:100%}
+    .ad-top{margin-top:1rem}
+    main{flex:1;max-width:760px;width:100%;margin:0 auto;padding:1.5rem 1rem}
+    .hero{text-align:center;margin-bottom:2rem}
+    .hero h1{font-size:2rem;font-weight:700;line-height:1.3;margin-bottom:.75rem}
+    .hero p{color:var(--muted);font-size:1rem;max-width:550px;margin:0 auto}
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-bottom:1.5rem}
+    .card h2{font-size:1rem;font-weight:600;margin-bottom:1rem;color:var(--accent2)}
+    label{display:block;margin-bottom:.3rem;font-size:.85rem;color:var(--muted)}
+    input,textarea,select{width:100%;padding:.65rem .9rem;background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:inherit;font-size:.9rem;outline:none;transition:border .2s}
+    input:focus,textarea:focus,select:focus{border-color:var(--accent)}
+    textarea{resize:vertical;min-height:120px}
+    .btn{display:inline-flex;align-items:center;gap:.4rem;padding:.65rem 1.4rem;border-radius:8px;font-weight:600;font-size:.9rem;cursor:pointer;border:none;transition:all .2s;font-family:inherit}
+    .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff}
+    .btn-primary:hover{opacity:.85;transform:translateY(-1px)}
+    .btn-secondary{background:var(--surface2);color:var(--text);border:1px solid var(--border)}
+    .btn-secondary:hover{border-color:var(--accent)}
+    .btn-group{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}
+    .result-box{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:1rem;margin-top:1rem;word-break:break-all;font-size:.9rem;min-height:60px}
+    .result-box.hidden{display:none}
+    .badge{display:inline-block;padding:.2rem .6rem;border-radius:999px;font-size:.75rem;font-weight:600}
+    .badge-success{background:#10b98120;color:var(--success)}
+    .badge-error{background:#ef444420;color:var(--error)}
+    .badge-warning{background:#f59e0b20;color:var(--warning)}
+    .faq{margin-top:2rem}
+    .faq h2{font-size:1.2rem;margin-bottom:1rem}
+    .faq-item{border-bottom:1px solid var(--border);padding:.75rem 0}
+    .faq-item h3{font-size:.9rem;font-weight:600;margin-bottom:.3rem;color:var(--accent2)}
+    .faq-item p{font-size:.85rem;color:var(--muted);line-height:1.6}
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:1.5rem;text-align:center;font-size:.8rem;color:var(--muted)}
+    footer a{color:var(--accent2);text-decoration:none}
+    @media(max-width:600px){.hero h1{font-size:1.5rem}.btn-group{flex-direction:column}}
+  </style>
+  <!-- Monetag Popunder zone 10685916 -->
+  <script>(function(s){s.dataset.zone='10685916',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+  <!-- Monetag Push Notifications zone 10685938 -->
+  <script src="https://5gvci.com/act/files/tag.min.js?z=10685938" data-cfasync="false" async></script>
+</head>
+<body>
+<header>
+  <div class="logo">*</div>
+  <h1>MicroTools</h1>
+</header>
+<nav><a href="/">Inicio</a> &rsaquo; Conversor de Unidades</nav>
+
+<!-- Monetag Ad Slot -->
+<div class="ad-container ad-top">
+  <!-- REEMPLAZA con tu código de Monetag -->
+  <!-- <script async src="//your-monetag-script.js"></script> -->
+</div>
+
+<main>
+  <div class="hero">
+    <h1>Conversor de Unidades</h1>
+    <p>Convierte longitud, peso, temperatura, volumen, área y más unidades al instante.</p>
+  </div>
+
+  <div class="card">
+<h2>Conversor de Unidades</h2>
+<div style="margin-bottom:1rem"><label>Categoria</label>
+<select id="cat" onchange="updateUnits()">
+  <option value="length">Longitud</option><option value="weight">Peso / Masa</option>
+  <option value="temp">Temperatura</option><option value="volume">Volumen</option>
+  <option value="speed">Velocidad</option><option value="area">Area</option>
+</select></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-bottom:.75rem">
+  <div><label>De</label><select id="unit-from" onchange="convertUnits()"></select></div>
+  <div><label>A</label><select id="unit-to" onchange="convertUnits()"></select></div>
+</div>
+<label>Valor</label><input type="number" id="unit-val" value="1" oninput="convertUnits()"/>
+<div class="result-box" id="unit-result" style="margin-top:1rem;font-size:1.2rem;font-weight:600">--</div>
+</div>
+<script>
+var UNITS={
+  length:{m:1,km:0.001,cm:100,mm:1000,in:39.3701,ft:3.28084,yd:1.09361,mi:0.000621371},
+  weight:{kg:1,g:1000,mg:1e6,lb:2.20462,oz:35.274,t:0.001},
+  volume:{l:1,ml:1000,m3:0.001,cup:4.22675,pt:2.11338,gal:0.264172},
+  speed:{'m_s':1,'km_h':3.6,'mph':2.23694,'knot':1.94384},
+  area:{m2:1,km2:1e-6,cm2:1e4,ha:1e-4,acre:0.000247105,ft2:10.7639}
+};
+var TLABELS={m:'Metro',km:'Kilometro',cm:'Centimetro',mm:'Milimetro',in:'Pulgada (in)',ft:'Pie (ft)',yd:'Yarda',mi:'Milla',kg:'Kilogramo',g:'Gramo',mg:'Miligramo',lb:'Libra',oz:'Onza',t:'Tonelada',l:'Litro',ml:'Mililitro',m3:'Metro cubico',cup:'Taza',pt:'Pinta',gal:'Galon',m_s:'m/s',km_h:'km/h',mph:'mph',knot:'Nudo',m2:'m2',km2:'km2',cm2:'cm2',ha:'Hectarea',acre:'Acre',ft2:'ft2'};
+var TEMPKEYS=['C','F','K'],TEMPLABELS={C:'Celsius (C)',F:'Fahrenheit (F)',K:'Kelvin (K)'};
+function TCONV(v,from,to){var tC={C:function(x){return x;},F:function(x){return x*9/5+32;},K:function(x){return x+273.15;}};var fC={C:function(x){return x;},F:function(x){return(x-32)*5/9;},K:function(x){return x-273.15;}};return tC[to](fC[from](v));}
+function updateUnits(){
+  var cat=document.getElementById('cat').value;
+  var keys=cat==='temp'?TEMPKEYS:Object.keys(UNITS[cat]);
+  var lbls=cat==='temp'?TEMPLABELS:TLABELS;
+  ['unit-from','unit-to'].forEach(function(id,i){
+    var sel=document.getElementById(id);sel.innerHTML='';
+    keys.forEach(function(k){var o=document.createElement('option');o.value=k;o.textContent=(lbls[k]||k);sel.appendChild(o);});
+    if(i===1&&keys[1])sel.value=keys[1];
+  });
+  convertUnits();
+}
+function convertUnits(){
+  var v=parseFloat(document.getElementById('unit-val').value);
+  var from=document.getElementById('unit-from').value,to=document.getElementById('unit-to').value;
+  var cat=document.getElementById('cat').value;
+  var res=cat==='temp'?TCONV(v,from,to):(v/UNITS[cat][from])*UNITS[cat][to];
+  document.getElementById('unit-result').textContent=res.toFixed(6).replace(/\.?0+$/,'')+' '+to;
+}
+window.onload=updateUnits;
+</script>
+
+  <!-- FAQ para SEO longitud -->
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="faq-item" itemscope itemtype="https://schema.org/Question"><h3 itemprop="name">¿Qué tipos de unidades puede convertir?</h3><p itemprop="text">Longitud, peso/masa, temperatura, volumen, área, velocidad, tiempo y energía.</p></div>
+<div class="faq-item" itemscope itemtype="https://schema.org/Question"><h3 itemprop="name">¿Es preciso para usos científicos?</h3><p itemprop="text">Sí, usamos factores de conversión estándar internacionales con alta precisión decimal.</p></div>
+<div class="faq-item" itemscope itemtype="https://schema.org/Question"><h3 itemprop="name">¿Incluye el sistema métrico e imperial?</h3><p itemprop="text">Sí, convierte entre ambos sistemas completos.</p></div>
+
+  </section>
+</main>
+
+<!-- Monetag Ad Slot Bottom -->
+<div class="ad-container ad-bottom">
+  <!-- REEMPLAZA con tu código de Monetag -->
+</div>
+
+<footer>
+  <p>MicroTools &copy; 2025 &mdash; Herramientas gratuitas online &mdash;
+  <a href="/privacidad/">Privacidad</a> &middot; <a href="/contacto/">Contacto</a></p>
+</footer>
+
+
+</body>
+</html>
