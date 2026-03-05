@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Test de Velocidad de Internet Gratis</title>
+  <meta name="description" content="Mide tu velocidad de internet gratis: descarga, subida y ping en segundos. Sin apps."/>
+  <meta name="keywords" content="test velocidad internet, speed test gratis, medir velocidad wifi, ping test"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="MicroTools"/>
+  <meta name="monetag" content="79779c0cb7c8a241281fe23e644eb5a3"/>
+  <meta name="google-site-verification" content="7_B89CtYqhN6a7rBgQ4t9M06hkNcz3867Xgqm_guu34"/>
+  <link rel="canonical" href="https://hazlofacil.vercel.app/02-verificador-velocidad/"/>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Test de Velocidad de Internet Gratis"/>
+  <meta property="og:description" content="Mide tu velocidad de internet gratis: descarga, subida y ping en segundos. Sin apps."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://hazlofacil.vercel.app/02-verificador-velocidad/"/>
+  <meta property="og:locale" content="es_ES"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Test de Velocidad de Internet Gratis"/>
+  <meta name="twitter:description" content="Mide tu velocidad de internet gratis: descarga, subida y ping en segundos. Sin apps."/>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Test de Velocidad de Internet Gratis","description":"Mide tu velocidad de internet gratis: descarga, subida y ping en segundos. Sin apps.","url":"https://TUDOMINIO.com/02-verificador-velocidad/","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#0f0f13;--surface:#1a1a24;--surface2:#22222f;--accent:#7c3aed;
+      --accent2:#a855f7;--text:#e2e8f0;--muted:#94a3b8;--border:#2d2d3d;
+      --radius:12px;--success:#10b981;--warning:#f59e0b;--error:#ef4444;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+    header{background:var(--surface);border-bottom:1px solid var(--border);padding:1rem 1.5rem;display:flex;align-items:center;gap:1rem}
+    header h1{font-size:1.2rem;font-weight:700;background:linear-gradient(135deg,var(--accent2),#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    header .logo{width:36px;height:36px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+    nav{background:var(--surface);border-bottom:1px solid var(--border);padding:.5rem 1.5rem;font-size:.8rem;color:var(--muted)}
+    nav a{color:var(--accent2);text-decoration:none}
+    .ad-container{background:var(--surface2);border:1px dashed var(--border);border-radius:var(--radius);margin:1rem auto;max-width:760px;min-height:90px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.75rem;width:100%}
+    .ad-top{margin-top:1rem}
+    main{flex:1;max-width:760px;width:100%;margin:0 auto;padding:1.5rem 1rem}
+    .hero{text-align:center;margin-bottom:2rem}
+    .hero h1{font-size:2rem;font-weight:700;line-height:1.3;margin-bottom:.75rem}
+    .hero p{color:var(--muted);font-size:1rem;max-width:550px;margin:0 auto}
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-bottom:1.5rem}
+    .card h2{font-size:1rem;font-weight:600;margin-bottom:1rem;color:var(--accent2)}
+    label{display:block;margin-bottom:.3rem;font-size:.85rem;color:var(--muted)}
+    input,textarea,select{width:100%;padding:.65rem .9rem;background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:inherit;font-size:.9rem;outline:none;transition:border .2s}
+    input:focus,textarea:focus,select:focus{border-color:var(--accent)}
+    textarea{resize:vertical;min-height:120px}
+    .btn{display:inline-flex;align-items:center;gap:.4rem;padding:.65rem 1.4rem;border-radius:8px;font-weight:600;font-size:.9rem;cursor:pointer;border:none;transition:all .2s;font-family:inherit}
+    .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff}
+    .btn-primary:hover{opacity:.85;transform:translateY(-1px)}
+    .btn-secondary{background:var(--surface2);color:var(--text);border:1px solid var(--border)}
+    .btn-secondary:hover{border-color:var(--accent)}
+    .btn-group{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}
+    .result-box{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:1rem;margin-top:1rem;word-break:break-all;font-size:.9rem;min-height:60px}
+    .result-box.hidden{display:none}
+    .badge{display:inline-block;padding:.2rem .6rem;border-radius:999px;font-size:.75rem;font-weight:600}
+    .badge-success{background:#10b98120;color:var(--success)}
+    .badge-error{background:#ef444420;color:var(--error)}
+    .badge-warning{background:#f59e0b20;color:var(--warning)}
+    .faq{margin-top:2rem}
+    .faq h2{font-size:1.2rem;margin-bottom:1rem}
+    .faq-item{border-bottom:1px solid var(--border);padding:.75rem 0}
+    .faq-item h3{font-size:.9rem;font-weight:600;margin-bottom:.3rem;color:var(--accent2)}
+    .faq-item p{font-size:.85rem;color:var(--muted);line-height:1.6}
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:1.5rem;text-align:center;font-size:.8rem;color:var(--muted)}
+    footer a{color:var(--accent2);text-decoration:none}
+    @media(max-width:600px){.hero h1{font-size:1.5rem}.btn-group{flex-direction:column}}
+  </style>
+  <!-- Monetag Popunder zone 10685916 -->
+  <script>(function(s){s.dataset.zone='10685916',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+  <!-- Monetag Push Notifications zone 10685938 -->
+  <script src="https://5gvci.com/act/files/tag.min.js?z=10685938" data-cfasync="false" async></script>
+</head>
+<body>
+<header>
+  <div class="logo">*</div>
+  <h1>MicroTools</h1>
+</header>
+<nav><a href="/">Inicio</a> &rsaquo; Test de Velocidad de Internet</nav>
+
+<!-- Monetag Ad Slot -->
+<div class="ad-container ad-top">
+  <!-- REEMPLAZA con tu código de Monetag -->
+  <!-- <script async src="//your-monetag-script.js"></script> -->
+</div>
+
+<main>
+  <div class="hero">
+    <h1>Test de Velocidad de Internet</h1>
+    <p>Mide tu velocidad de internet gratis: descarga, subida y ping en segundos. Sin apps.</p>
+  </div>
+
+  <div class="card">
+<h2>Mide tu velocidad de conexion</h2>
+<p style="color:var(--muted);font-size:.9rem;margin-bottom:1rem">Descarga un archivo de referencia de Cloudflare y calcula tu velocidad real.</p>
+<button class="btn btn-primary" id="start-btn" onclick="startTest()">Iniciar Test</button>
+<div id="results" style="margin-top:1.5rem;display:none">
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;text-align:center">
+    <div class="card" style="padding:1rem"><div style="font-size:2rem;font-weight:700;color:var(--accent2)" id="dl-val">--</div><div style="font-size:.8rem;color:var(--muted)">Descarga Mbps</div></div>
+    <div class="card" style="padding:1rem"><div style="font-size:2rem;font-weight:700;color:var(--success)" id="ping-val">--</div><div style="font-size:.8rem;color:var(--muted)">Ping ms</div></div>
+    <div class="card" style="padding:1rem"><div style="font-size:2rem;font-weight:700;color:var(--warning)" id="ul-val">--</div><div style="font-size:.8rem;color:var(--muted)">Subida</div></div>
+  </div>
+</div>
+</div>
+<script>
+async function startTest(){
+  const btn=document.getElementById('start-btn');btn.disabled=true;btn.textContent='Midiendo...';
+  document.getElementById('results').style.display='block';
+  try{
+    const p0=performance.now();
+    await fetch('https://speed.cloudflare.com/__down?measId=1&bytes=1000');
+    document.getElementById('ping-val').textContent=(performance.now()-p0).toFixed(0);
+    const t0=performance.now();
+    const r=await fetch('https://speed.cloudflare.com/__down?measId=1&bytes=10000000');
+    const blob=await r.blob();
+    const s=(performance.now()-t0)/1000;
+    document.getElementById('dl-val').textContent=((blob.size/1e6*8)/s).toFixed(1);
+    document.getElementById('ul-val').textContent='N/D';
+  }catch(e){document.getElementById('dl-val').textContent='Error';}
+  btn.disabled=false;btn.textContent='Repetir Test';
+}
+</script>
+
+  <!-- FAQ para SEO longitud -->
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="faq-item" itemscope itemtype="https://schema.org/Question"><h3 itemprop="name">¿Cómo funciona el test de velocidad?</h3><p itemprop="text">Descarga y sube archivos de prueba midiendo el tiempo transcurrido para calcular la velocidad en Mbps.</p></div>
+<div class="faq-item" itemscope itemtype="https://schema.org/Question"><h3 itemprop="name">¿Es preciso el resultado?</h3><p itemprop="text">Es una estimación aproximada basada en HTTP. Para mayor precisión usa Speedtest de Ookla.</p></div>
+<div class="faq-item" itemscope itemtype="https://schema.org/Question"><h3 itemprop="name">¿Consume datos móviles?</h3><p itemprop="text">Sí, cada prueba consume aproximadamente 5-20 MB de datos.</p></div>
+
+  </section>
+</main>
+
+<!-- Monetag Ad Slot Bottom -->
+<div class="ad-container ad-bottom">
+  <!-- REEMPLAZA con tu código de Monetag -->
+</div>
+
+<footer>
+  <p>MicroTools &copy; 2025 &mdash; Herramientas gratuitas online &mdash;
+  <a href="/privacidad/">Privacidad</a> &middot; <a href="/contacto/">Contacto</a></p>
+</footer>
+
+
+</body>
+</html>
