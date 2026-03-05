@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Generador de Firma para Email Gratis</title>
+  <meta name="description" content="Crea una firma profesional para email con tu logo, contacto y redes sociales. Gratis y sin registro."/>
+  <meta name="keywords" content="generador firma email gratis, crear firma correo profesional, email signature, firma HTML"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="MicroTools"/>
+  <meta name="monetag" content="79779c0cb7c8a241281fe23e644eb5a3"/>
+  <meta name="google-site-verification" content="7_B89CtYqhN6a7rBgQ4t9M06hkNcz3867Xgqm_guu34"/>
+  <link rel="canonical" href="https://hazlofacil.vercel.app/19-firma-email/"/>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Generador de Firma para Email Gratis"/>
+  <meta property="og:description" content="Crea una firma profesional para email con tu logo, contacto y redes sociales. Gratis y sin registro."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://hazlofacil.vercel.app/19-firma-email/"/>
+  <meta property="og:locale" content="es_ES"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Generador de Firma para Email Gratis"/>
+  <meta name="twitter:description" content="Crea una firma profesional para email con tu logo, contacto y redes sociales. Gratis y sin registro."/>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Generador de Firma para Email Gratis","description":"Crea una firma profesional para email con tu logo, contacto y redes sociales. Gratis y sin registro.","url":"https://TUDOMINIO.com/19-firma-email/","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#0f0f13;--surface:#1a1a24;--surface2:#22222f;--accent:#7c3aed;
+      --accent2:#a855f7;--text:#e2e8f0;--muted:#94a3b8;--border:#2d2d3d;
+      --radius:12px;--success:#10b981;--warning:#f59e0b;--error:#ef4444;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+    header{background:var(--surface);border-bottom:1px solid var(--border);padding:1rem 1.5rem;display:flex;align-items:center;gap:1rem}
+    header h1{font-size:1.2rem;font-weight:700;background:linear-gradient(135deg,var(--accent2),#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    header .logo{width:36px;height:36px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+    nav{background:var(--surface);border-bottom:1px solid var(--border);padding:.5rem 1.5rem;font-size:.8rem;color:var(--muted)}
+    nav a{color:var(--accent2);text-decoration:none}
+    .ad-container{background:var(--surface2);border:1px dashed var(--border);border-radius:var(--radius);margin:1rem auto;max-width:760px;min-height:90px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.75rem;width:100%}
+    .ad-top{margin-top:1rem}
+    main{flex:1;max-width:760px;width:100%;margin:0 auto;padding:1.5rem 1rem}
+    .hero{text-align:center;margin-bottom:2rem}
+    .hero h1{font-size:2rem;font-weight:700;line-height:1.3;margin-bottom:.75rem}
+    .hero p{color:var(--muted);font-size:1rem;max-width:550px;margin:0 auto}
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-bottom:1.5rem}
+    .card h2{font-size:1rem;font-weight:600;margin-bottom:1rem;color:var(--accent2)}
+    label{display:block;margin-bottom:.3rem;font-size:.85rem;color:var(--muted)}
+    input,textarea,select{width:100%;padding:.65rem .9rem;background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:inherit;font-size:.9rem;outline:none;transition:border .2s}
+    input:focus,textarea:focus,select:focus{border-color:var(--accent)}
+    textarea{resize:vertical;min-height:120px}
+    .btn{display:inline-flex;align-items:center;gap:.4rem;padding:.65rem 1.4rem;border-radius:8px;font-weight:600;font-size:.9rem;cursor:pointer;border:none;transition:all .2s;font-family:inherit}
+    .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff}
+    .btn-primary:hover{opacity:.85;transform:translateY(-1px)}
+    .btn-secondary{background:var(--surface2);color:var(--text);border:1px solid var(--border)}
+    .btn-secondary:hover{border-color:var(--accent)}
+    .btn-group{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}
+    .result-box{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:1rem;margin-top:1rem;word-break:break-all;font-size:.9rem;min-height:60px}
+    .result-box.hidden{display:none}
+    .badge{display:inline-block;padding:.2rem .6rem;border-radius:999px;font-size:.75rem;font-weight:600}
+    .badge-success{background:#10b98120;color:var(--success)}
+    .badge-error{background:#ef444420;color:var(--error)}
+    .badge-warning{background:#f59e0b20;color:var(--warning)}
+    .faq{margin-top:2rem}
+    .faq h2{font-size:1.2rem;margin-bottom:1rem}
+    .faq-item{border-bottom:1px solid var(--border);padding:.75rem 0}
+    .faq-item h3{font-size:.9rem;font-weight:600;margin-bottom:.3rem;color:var(--accent2)}
+    .faq-item p{font-size:.85rem;color:var(--muted);line-height:1.6}
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:1.5rem;text-align:center;font-size:.8rem;color:var(--muted)}
+    footer a{color:var(--accent2);text-decoration:none}
+    @media(max-width:600px){.hero h1{font-size:1.5rem}.btn-group{flex-direction:column}}
+  </style>
+  <!-- Monetag Popunder zone 10685916 -->
+  <script>(function(s){s.dataset.zone='10685916',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+  <!-- Monetag Push Notifications zone 10685938 -->
+  <script src="https://5gvci.com/act/files/tag.min.js?z=10685938" data-cfasync="false" async></script>
+</head>
+<body>
+<header>
+  <div class="logo">*</div>
+  <h1>MicroTools</h1>
+</header>
+<nav><a href="/">Inicio</a> &rsaquo; Generador de Firma para Email</nav>
+
+<!-- Monetag Ad Slot -->
+<div class="ad-container ad-top">
+  <!-- REEMPLAZA con tu código de Monetag -->
+  <!-- <script async src="//your-monetag-script.js"></script> -->
+</div>
+
+<main>
+  <div class="hero">
+    <h1>Generador de Firma para Email</h1>
+    <p>Crea una firma profesional para email con tu logo, contacto y redes sociales. Gratis y sin registro.</p>
+  </div>
+
+  <div class="card">
+<h2>Disena tu firma de email profesional</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem">
+  <div><label>Nombre completo</label><input type="text" id="s-name" value="Juan Garcia" oninput="updateSig()"/></div>
+  <div><label>Cargo</label><input type="text" id="s-role" value="Desarrollador Web" oninput="updateSig()"/></div>
+  <div><label>Empresa</label><input type="text" id="s-company" value="MiEmpresa" oninput="updateSig()"/></div>
+  <div><label>Telefono</label><input type="text" id="s-phone" value="+34 600 000 000" oninput="updateSig()"/></div>
+  <div><label>Email</label><input type="email" id="s-email" value="juan@miempresa.com" oninput="updateSig()"/></div>
+  <div><label>Web</label><input type="url" id="s-web" value="https://miempresa.com" oninput="updateSig()"/></div>
+  <div><label>Color primario</label><input type="color" id="s-color" value="#7c3aed" oninput="updateSig()"/></div>
+</div>
+<div style="margin-top:1rem;padding:1rem;background:#fff;border-radius:8px" id="sig-preview"></div>
+<div class="btn-group"><button class="btn btn-primary" onclick="copySig()">Copiar HTML de firma</button></div>
+<textarea id="sig-html" style="display:none"></textarea>
+</div>
+<script>
+function getSigHTML(){
+  var n=document.getElementById('s-name').value,r=document.getElementById('s-role').value;
+  var c=document.getElementById('s-company').value,p=document.getElementById('s-phone').value;
+  var e=document.getElementById('s-email').value,w=document.getElementById('s-web').value;
+  var col=document.getElementById('s-color').value;
+  return '<table style="font-family:Arial,sans-serif;font-size:13px;color:#333;border-collapse:collapse"><tr><td style="padding-right:16px;border-right:3px solid '+col+';padding:8px 16px 8px 0"><strong style="font-size:15px;color:'+col+'">'+n+'</strong><br><span style="color:#666">'+r+'</span><br><span style="color:#666">'+c+'</span></td><td style="padding-left:16px"><a href="tel:'+p+'" style="color:#333;text-decoration:none">Tel: '+p+'</a><br><a href="mailto:'+e+'" style="color:'+col+';text-decoration:none">'+e+'</a><br><a href="'+w+'" style="color:'+col+';text-decoration:none">'+w+'</a></td></tr></table>';
+}
+function updateSig(){document.getElementById('sig-preview').innerHTML=getSigHTML();}
+function copySig(){navigator.clipboard.writeText(getSigHTML());}
+window.onload=updateSig;
+</script>
+
+  <!-- FAQ para SEO longitud -->
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="faq-item" itemscope itemtype="https://schema.org/Question"><h3 itemprop="name">¿Puedo usar la firma en Gmail?</h3><p itemprop="text">Sí, genera HTML compatible con Gmail, Outlook y la mayoría de clientes de email.</p></div>
+<div class="faq-item" itemscope itemtype="https://schema.org/Question"><h3 itemprop="name">¿Puedo agregar mi logo?</h3><p itemprop="text">Sí, puedes incluir la URL de tu imagen de logo en el generador.</p></div>
+<div class="faq-item" itemscope itemtype="https://schema.org/Question"><h3 itemprop="name">¿La firma es personalizable?</h3><p itemprop="text">Completamente. Nombre, cargo, empresa, teléfono, redes sociales y colores.</p></div>
+
+  </section>
+</main>
+
+<!-- Monetag Ad Slot Bottom -->
+<div class="ad-container ad-bottom">
+  <!-- REEMPLAZA con tu código de Monetag -->
+</div>
+
+<footer>
+  <p>MicroTools &copy; 2025 &mdash; Herramientas gratuitas online &mdash;
+  <a href="/privacidad/">Privacidad</a> &middot; <a href="/contacto/">Contacto</a></p>
+</footer>
+
+
+</body>
+</html>
