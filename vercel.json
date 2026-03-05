@@ -1,24 +1,34 @@
 {
     "cleanUrls": false,
     "trailingSlash": false,
-    "headers": [
+    "routes": [
         {
-            "source": "/sitemap.xml",
-            "headers": [
-                {
-                    "key": "Content-Type",
-                    "value": "application/xml; charset=utf-8"
-                }
-            ]
+            "src": "/sitemap.xml",
+            "dest": "/sitemap.xml"
         },
         {
-            "source": "/sw.js",
-            "headers": [
-                {
-                    "key": "Content-Type",
-                    "value": "application/javascript"
-                }
-            ]
+            "src": "/sw.js",
+            "dest": "/sw.js"
+        },
+        {
+            "src": "/googled6e0f85472448f7b.html",
+            "dest": "/googled6e0f85472448f7b.html"
+        },
+        {
+            "src": "/(.*)\\.xml",
+            "dest": "/$1.xml"
+        },
+        {
+            "src": "/(.*)\\.html",
+            "dest": "/$1.html"
+        },
+        {
+            "src": "/(.*)\\.js",
+            "dest": "/$1.js"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/$1"
         }
     ]
 }
