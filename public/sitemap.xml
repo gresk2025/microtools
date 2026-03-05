@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://hazlofacil.vercel.app/</loc><priority>1.0</priority></url>
+  <url><loc>https://hazlofacil.vercel.app/01-generador-qr/</loc><priority>0.8</priority></url>
+  <url><loc>https://hazlofacil.vercel.app/02-verificador-velocidad/</loc><priority>0.8</priority></url>
+  <url><loc>https://hazlofacil.vercel.app/03-conversor-divisas/</loc><priority>0.8</priority></url>
+  <url><loc>https://hazlofacil.vercel.app/04-conversor-pdf-jpg/</loc><priority>0.8</priority></url>
+  <url><loc>https://hazlofacil.vercel.app/05-detector-ip/</loc><priority>0.8</priority></url>
+  <url><loc>https://hazlofacil.vercel.app/06-compresor-imagenes/</loc><priority>0.8</priority></url>
+  <url><loc>https://hazlofacil.vercel.app/07-contador-palabras/</loc><priority>0.8</priority></url>
+  <url><loc>https://hazlofacil.vercel.app/08-generador-contrasenas/</loc><priority>0.8</priority></url>
+  <url><loc>https://hazlofacil.vercel.app/09-interes-compuesto/</loc><priority>0.8</priority></url>
+  <url><loc>https://hazlofacil.vercel.app/10-extractor-texto-imagen/</loc><priority>0.8</priority></url>
+  <url><loc>https://hazlofacil.vercel.app/11-link-whatsapp/</loc><priority>0.8</priority></url>
+  <url><loc>https://hazlofacil.vercel.app/12-calculadora-imc/</loc><priority>0.8</priority></url>
+  <url><loc>https://hazlofacil.vercel.app/13-formateador-json/</loc><priority>0.8</priority></url>
+  <url><loc>https://hazlofacil.vercel.app/14-lorem-ipsum/</loc><priority>0.8</priority></url>
+  <url><loc>https://hazlofacil.vercel.app/15-pomodoro/</loc><priority>0.8</priority></url>
+  <url><loc>https://hazlofacil.vercel.app/16-verificador-url/</loc><priority>0.8</priority></url>
+  <url><loc>https://hazlofacil.vercel.app/17-conversor-unidades/</loc><priority>0.8</priority></url>
+  <url><loc>https://hazlofacil.vercel.app/18-paleta-colores/</loc><priority>0.8</priority></url>
+  <url><loc>https://hazlofacil.vercel.app/19-firma-email/</loc><priority>0.8</priority></url>
+  <url><loc>https://hazlofacil.vercel.app/20-conversor-base64/</loc><priority>0.8</priority></url>
+  <url><loc>https://hazlofacil.vercel.app/21-correo-temporal/</loc><priority>0.8</priority></url>
+</urlset>
